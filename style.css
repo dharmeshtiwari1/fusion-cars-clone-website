@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s all;
+}
+body {
+  font-family: Arial, sans-serif;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: rgb(19, 11, 11);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100vw;
+  max-width: 100vw;
+}
+nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #36454f;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 10px;
+  z-index: 99;
+  width: 100vw;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+nav a.active {
+  color: rgb(255, 171, 61);
+  background-color: rgba(197, 197, 197, 0.354);
+}
+nav a:hover {
+  background-color: rgba(197, 197, 197, 0.585);
+}
+
+.container {
+  max-width: 100vw;
+}
+.container h1 {
+  font-size: 3rem;
+  color: rgb(199, 130, 81);
+}
+
+.image {
+  width: 100%;
+  max-width: 100vw;
+  padding-inline: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.image img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 30px 0;
+  max-height: 95dvh;
+  object-fit: cover;
+}
+
+.heading {
+  text-align: center;
+  margin: 40px 0;
+}
+
+section.about {
+  margin: 60px auto;
+  max-width: 85vw;
+}
+section.about h1 {
+  color: rgb(199, 130, 81);
+  font-size: 3rem;
+}
+section.about h2 {
+  margin-top: 30px;
+  font-size: 2rem;
+}
+section.about p {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: rgba(49, 33, 24, 0.683);
+}
+section.about .about-hero {
+  margin: 30px 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+}
+
+section.items {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-bottom: 90px;
+}
+section .hand-shak {
+  background: #fabf8c;
+}
+section.items div {
+  border: 1px solid rgba(0, 0, 0, 0.311);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 240px;
+}
+section.items div:hover {
+  background: #ffe3ca;
+}
+section.items div img {
+  width: 90%;
+  aspect-ratio: 1;
+}
+section.items div p {
+  margin-top: 10px;
+}
+
+section.items.about {
+  margin-top: 20px;
+}
+section.items.about div {
+  background: rgb(255, 247, 242);
+  max-width: 300px;
+}
+section.items.about div:hover {
+  background: #ffe3ca;
+}
+section.items.about img {
+  max-width: 60%;
+  margin: 20px;
+}
+section.items.about h2 {
+  font-size: 1.6rem;
+}
+section.items.about p {
+  font-size: 1.2rem;
+}
+
+.form-sec {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.form-sec h1 {
+  color: rgb(199, 130, 81);
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.form-sec p {
+  font-size: 1.2rem;
+}
+
+video{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+form {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 60px;
+  font-weight: 600;
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+form label {
+  display: block;
+  margin-bottom: 20px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1.5px solid rgb(199, 130, 81);
+  border-radius: 6px;
+  background: #fffdfa;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid rgb(199, 130, 81);
+  background: rgb(255, 247, 240);
+}
+textarea {
+  min-width: 100%;
+  max-width: 100%;
+  height: 150px;
+  min-height: 150px;
+  max-height: 300px;
+}
+form input[type="submit"] {
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: rgb(224, 162, 118);
+  margin: 20px 0;
+}
+
+/* Contact Page Start */
+.contact {
+  margin: 50px auto;
+  padding: 30px;
+  max-width: 900px;
+  border: 1px solid rgb(19, 11, 11);
+  border-radius: 30px;
+  background: rgb(255, 246, 240);
+  margin-bottom: 90px;
+}
+.contact legend {
+  padding: 10px 30px;
+  background: rgb(199, 130, 81);
+  font-size: 2.1rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+}
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+.contact .info {
+  margin-top: 30px;
+}
+.contact .info h3 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #4d4742;
+}
+.contact .info p {
+  font-size: 1.3rem;
+  color: #804f27;
+}
+/* Contact Page End */
+
+/* Banner Start */
+section.banner {
+  width: 100vw;
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+  background: url("accets/about/hero-img.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+section.banner.car {
+  background: url("accets/Images/hero-img.jpg");
+}
+section.banner.car::before {
+  content: "";
+  position: absolute;
+  background: #000000a1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+section.banner h1 {
+  font-size: 2.6rem;
+}
+section.banner p {
+  font-size: 1.3rem;
+  color: rgb(255, 189, 142);
+}
+/* Banner End */
+
+/* Car Page Start */
+section.car-sec {
+  padding: 30px;
+}
+section.car-sec h1 {
+  font-size: 2rem;
+  margin-left: 10%;
+  color: rgb(199, 130, 81);
+  position: relative;
+}
+section.car-sec h1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  background: rgb(237, 121, 38);
+  width: 6px;
+  height: 60%;
+}
+
+section.car-sec .car-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+section.car-sec .car-wrapper .car {
+  max-width: 300px;
+  padding: 17px;
+  border-radius: 10px;
+  text-align: center;
+  background: #804f2714;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+section.car-sec .car-wrapper .car:hover {
+  background: rgba(180, 95, 26, 0.177);
+}
+section.car-sec .car-wrapper .car img {
+  width: 100%;
+  border-radius: 7px;
+}
+section.car-sec .car-wrapper .car:hover img {
+  scale: 1.03;
+}
+section.car-sec .car-wrapper .car h2 {
+  margin: 15px 0 7px 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+section.car-sec .more-info {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+section.car-sec .car .more-info h4 {
+  padding: 7px;
+  color: rgb(19, 11, 11);
+  border-right: 1px solid #36454f55;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+section.car-sec .more-info h4:last-child {
+  border: none;
+}
+section.car-sec .more-info h4 span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+section.car-sec button {
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  background: #cca57e;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+section.car-sec button:hover {
+  background: rgb(20, 10, 5);
+}
+/* Car Page End */
+
+/* Car Items Start */
+section.car-item {
+  padding: 60px;
+}
+section.car-item .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section.car-item .heading h1 {
+  font-size: 1.8rem;
+}
+section.car-item .heading button {
+  padding: 10px 20px;
+  color: #fff;
+  background: rgb(19, 11, 11);
+  border-radius: 10px;
+  position: relative;
+  font-size: 1.2rem;
+}
+section.car-item .heading button::after {
+  content: "INCLUDED ALL TAXES";
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  color: #000;
+  font-size: 0.7rem;
+}
+section.car-item img.hero-img {
+  width: 60%;
+  min-width: 380px;
+  border-radius: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.car-item .features {
+  margin-top: 50px;
+}
+section.car-item h2 {
+  color: rgb(199, 130, 81);
+  font-weight: 700;
+  border-bottom: 1px solid rgba(224, 162, 118, 0.651);
+  padding-bottom: 10px;
+}
+section.car-item .features .f-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+section.car-item .features .f-grid div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 180px;
+  max-width: 180px;
+  gap: 30px;
+  border-radius: 10px;
+  padding: 20px;
+}
+section.car-item .f-grid div:hover {
+  background: rgba(224, 162, 118, 0.103);
+
+}
+section.car-item .features .f-grid div img {
+  width: 50px;
+  min-width: 50px;
+}
+section.car-item .features .f-grid div p {
+  text-align: center;
+  color: #4d4742;
+}
+section.car-item .features .f-grid div p b {
+margin-top: 10px;
+display: block;
+color: rgb(199, 130, 81);
+}
+section.car-item .interior h2{
+  margin-top: 100px;
+}
+
+section.car-item .interior .f-grid  img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+
+/* Car Items End */
+
+footer {
+  margin-top: 190px;
+  background-color: #36454f;
+  color: #fff;
+  padding: 20px;
+}
+footer h1 {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #f0c08f;
+}
+footer h1 span {
+  font-size: 1.3rem;
+  color: #fff;
+}
+footer h2 {
+  margin-bottom: 10px;
+  color: rgb(255, 184, 134);
+}
+footer .flex {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer form {
+  width: 400px;
+  max-width: 90vw;
+  outline: none;
+}
+footer form div {
+  display: flex;
+  gap: 10px;
+}
+footer form input {
+  border: none;
+  outline: none;
+}
+footer form input[type="email"] {
+  margin: 10px 0;
+}
+footer form input[type="submit"] {
+  margin: 10px 0;
+  padding: 15px 0;
+}
+footer form textarea {
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+footer h4 {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: 500;
+}
+footer h4 b {
+  font-weight: 600;
+  color: #f0c08f;
+}
+footer p {
+  margin-top: 12px;
+  text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  section.form-sec form .form {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 780px) {
+  footer .flex {
+    justify-content: space-evenly;
+  }
+}
